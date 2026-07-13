@@ -1,6 +1,21 @@
 import Countdown from "@/components/Countdown";
 import Formulario from "@/components/Formulario";
 
+export const metadata = {
+
+  metadataBase: new URL('https://cumple-xv-pili.vercel.app/'),
+
+
+  title: "| Te invito a mi cumple",
+  description: "Cumple de XV.",
+  keywords: ["quince años", "cumpleaños"],
+  openGraph: {
+    title: "| Te invito a mi cumple",
+    description: "Cumple de XV.",
+    images: [{ url: "/fondocata3.png" }], // Imagen que aparecerá al compartir el link
+  },
+};
+
 export default function Home() {
   return (
  <main 
