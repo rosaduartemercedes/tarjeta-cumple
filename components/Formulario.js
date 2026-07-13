@@ -132,7 +132,7 @@ if (
 
 >
 
-  📍 Ver dirección
+  📍 Cómo llegar
 
 </a>
 
