@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 export default function Formulario() {
   const [nombre, setNombre] = useState("");
   const [status, setStatus] = useState("idle");
+  const [errorValidacion, setErrorValidacion] = useState(""); // Estado para el error de nombre/apellido
 
   useEffect(() => {
     const yaConfirmo = localStorage.getItem("asistencia_confirmada");
@@ -14,13 +15,24 @@ export default function Formulario() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setErrorValidacion(""); // Reseteamos errores previos
+    
+    // 1. Limpiamos espacios extras y separamos por palabras
+    const palabras = nombre.trim().split(/\s+/);
+
+    // 2. Validamos que haya al menos 2 palabras y que no sean strings vacíos
+    if (palabras.length < 2 || palabras[0] === "" || palabras[1] === "") {
+      setErrorValidacion("Por favor, ingresá tu nombre y apellido.");
+      return; // Frenamos el envío acá
+    }
+
     setStatus("loading");
     
     try {
       const res = await fetch("/api/confirmar", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ nombre }),
+        body: JSON.stringify({ nombre: nombre.trim() }), // Mandamos el nombre limpio de espacios raros
       });
 
       if (res.ok) {
@@ -35,7 +47,7 @@ export default function Formulario() {
     }
   };
 
-  // DISEÑO URBANO PARA LA CONFIRMACIÓN EXITOSA (Adiós al cuadro blanco/verde)
+  // DISEÑO URBANO PARA LA CONFIRMACIÓN EXITOSA
   if (status === "success") {
     return (
       <div className="text-center p-6 border border-white/10 rounded-2xl bg-black/40 backdrop-blur-md w-full my-2">
@@ -62,7 +74,10 @@ export default function Formulario() {
         type="text"
         placeholder="Nombre y Apellido"
         value={nombre}
-        onChange={(e) => setNombre(e.target.value)}
+        onChange={(e) => {
+          setNombre(e.target.value);
+          if (errorValidacion) setErrorValidacion(""); // Si empieza a escribir de nuevo, limpiamos el error
+        }}
         disabled={status === "loading"}
         required
         className="border border-white/10 p-3 rounded-xl text-base focus:outline-none focus:ring-1 focus:ring-white text-white bg-white/5 placeholder-neutral-500 backdrop-blur-sm transition-all text-center"
@@ -76,8 +91,17 @@ export default function Formulario() {
         {status === "loading" ? "Confirmando..." : "Confirmar Invitación"}
       </button>
       
+      {/* Mensaje de validación de Nombre y Apellido */}
+      {errorValidacion && (
+        <p className="text-red-400 text-xs text-center font-bold uppercase tracking-wider mt-1">
+          {errorValidacion}
+        </p>
+      )}
+
       {status === "error" && (
-        <p className="text-red-400 text-xs text-center font-bold uppercase tracking-wider mt-1">Hubo un problema, intentá de nuevo.</p>
+        <p className="text-red-400 text-xs text-center font-bold uppercase tracking-wider mt-1">
+          Hubo un problema, intentá de nuevo.
+        </p>
       )}
     </form>
   );
