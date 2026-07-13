@@ -28,13 +28,13 @@ export default function Home() {
       <div className="absolute inset-0 bg-neutral-950/10 z-0"></div>
 
       {/* Al estar abajo, le reducimos un toque el gap para que no sea gigante */}
-      <div className="relative z-10 w-full max-w-sm bg-black/55 backdrop-blur-md p-5 rounded-3xl border border-white/10 shadow-2xl flex flex-col gap-5 text-white">
+      <div className="relative z-10 w-full max-w-sm bg-black/55 backdrop-blur-md p-3 rounded-3xl border border-white/10 shadow-2xl flex flex-col gap-5 text-white">
 
 
      {/* Contenedor Principal */}
   
   {/* Encabezado con la información de fecha y hora agregada */}
-  <header className="text-center space-y-2">
+  <header className="text-center space-y-1">
     <span className="text-[10px] uppercase tracking-[0.35em] font-black bg-white text-black px-2 py-0.5 rounded-sm inline-block">
       FIESTA EXCLUSIVA
     </span>
