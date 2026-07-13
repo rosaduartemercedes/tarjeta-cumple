@@ -23,18 +23,18 @@ export default function Home() {
       // 1. bg-[url('/foto-mobile.jpg')] -> Carga la foto vertical por defecto (celulares).
       // 2. md:bg-[url('/foto-desktop.jpg')] -> En pantallas grandes (computadoras), cambia la foto a la horizontal.
       // 3. justify-end md:justify-center -> Abajo en el celu (para no tapar la cara), centrado en la compu.
-      className="relative min-h-screen w-full flex flex-col items-center justify-end p-4 pb-3 md:justify-center bg-cover bg-center bg-no-repeat bg-[url('/fondocata2.jpg')] md:bg-[url('/fondocata4.jpg')]"
+      className="relative min-h-screen w-full flex flex-col items-center justify-end p-4 pb-2 md:justify-center bg-cover bg-center bg-no-repeat bg-[url('/fondocatamobile.png')] md:bg-[url('/fondocata4.jpg')]"
     >
       <div className="absolute inset-0 bg-neutral-950/10 z-0"></div>
 
       {/* Al estar abajo, le reducimos un toque el gap para que no sea gigante */}
-      <div className="relative z-10 w-full max-w-sm bg-black/55 backdrop-blur-md p-3 rounded-3xl border border-white/10 shadow-2xl flex flex-col gap-5 text-white">
+      <div className="relative z-10 w-full max-w-sm bg-black/55 backdrop-blur-md p-3 rounded-3xl border border-white/10 shadow-2xl flex flex-col gap-4 text-white">
 
 
      {/* Contenedor Principal */}
   
   {/* Encabezado con la información de fecha y hora agregada */}
-  <header className="text-center space-y-1">
+  <header className="text-center space-y-2">
     <span className="text-[10px] uppercase tracking-[0.35em] font-black bg-white text-black px-2 py-0.5 rounded-sm inline-block">
       FIESTA EXCLUSIVA
     </span>
@@ -63,7 +63,7 @@ export default function Home() {
   </header>
 
   {/* Bloque del Reloj */}
-  <section className="bg-white/5 border border-white/5 p-4 rounded-2xl">
+  <section className="bg-white/5 border border-white/5 p-3 rounded-2xl">
     <Countdown />
   </section>
 
