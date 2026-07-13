@@ -87,8 +87,7 @@ if (
 
 
 
-
-
+ 
 
 
 
@@ -117,7 +116,13 @@ if (
       >
         {status === "loading" ? "Confirmando..." : "Confirmar Invitación"}
       </button>
-      
+
+ <div className="text-center mt-0 mb-0">
+ 
+  <p className="text-sm font-semibold text-white tracking-wide">Te espero en: La Campiña Eventos</p>
+  <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-neutral-400">Av Corrientes 1234 </p>
+ 
+</div>
 
 
 <a
@@ -128,7 +133,7 @@ if (
 
   rel="noopener noreferrer"
 
- className="w-full bg-gray-900 border border-white/20 hover:border-white/40 text-white hover:text-neutral-200 p-3 rounded-xl font-bold uppercase tracking-widest text-xs transition-all active:scale-[0.98] text-center block mt-1 hover:cursor-pointer"
+ className="w-full bg-red-950 border border-white/20 hover:border-white/40 text-white hover:text-neutral-200 p-3 rounded-xl font-bold uppercase tracking-widest text-xs transition-all active:scale-[0.98] text-center block mt-0 hover:cursor-pointer"
 >
 
   📍 Ver en el mapa
