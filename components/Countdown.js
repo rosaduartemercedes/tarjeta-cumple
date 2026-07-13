@@ -52,5 +52,10 @@ export default function Countdown() {
         <span className="text-[9px] uppercase tracking-wider font-sans font-bold text-neutral-400 mt-0.5">Seg</span>
       </div>
     </div>
+
+
+
+
+
   );
 }

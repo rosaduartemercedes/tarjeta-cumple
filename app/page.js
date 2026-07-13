@@ -48,9 +48,11 @@ export default function Home() {
         SÁBADO 05 DE DICIEMBRE
       </p>
       <p className="text-xs font-bold tracking-[0.2em] text-neutral-400 mt-0.5">
-        A LAS 22:00 HS
+        A LAS 22:00 HS. 
       </p>
     </div>
+
+    
 
     {/* Línea divisoria sutil para separar la info del cronómetro */}
     <hr className="border-white/10 my-2 w-1/4 mx-auto" />

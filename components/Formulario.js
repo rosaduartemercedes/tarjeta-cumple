@@ -53,7 +53,19 @@ if (
   // DISEÑO URBANO PARA LA CONFIRMACIÓN EXITOSA
   if (status === "success") {
     return (
+
+
+
+      
       <div className="text-center p-6 border border-white/10 rounded-2xl bg-black/40 backdrop-blur-md w-full my-2">
+       
+       
+       
+       
+       
+       
+       
+       
         <div className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white text-black mb-3 text-lg font-bold">
           ✓
         </div>
@@ -70,6 +82,18 @@ if (
   return (
     <form onSubmit={handleSubmit} className="flex flex-col gap-3 w-full">
       <div className="text-center mb-1">
+
+
+
+
+
+
+
+
+
+
+
+        
         <h2 className="text-xs font-bold uppercase tracking-[0.2em] text-neutral-300">Confirma tu asistencia</h2>
       </div>
 
@@ -89,10 +113,29 @@ if (
       <button 
         type="submit" 
         disabled={status === "loading"}
-        className="bg-white text-black p-3 rounded-xl font-black uppercase tracking-widest hover:bg-neutral-200 transition-all disabled:bg-neutral-700 text-xs active:scale-[0.98]"
+        className="bg-white text-black p-3 hover:cursor-pointer rounded-xl font-black uppercase tracking-widest hover:bg-neutral-200 transition-all disabled:bg-neutral-700 text-xs active:scale-[0.98]"
       >
         {status === "loading" ? "Confirmando..." : "Confirmar Invitación"}
       </button>
+      
+
+
+<a
+
+  href="https://maps.google.com/?q=La+Campiña+Eventos+Av+siempreviva+1234" // Tu link real de Maps
+
+  target="_blank"
+
+  rel="noopener noreferrer"
+
+  className="w-full bg-black border border-white/20 hover:border-white/40 text-neutral-300 hover:text-white p-3 rounded-xl font-bold uppercase tracking-widest text-[10px] transition-all active:scale-[0.98] text-center block mt-1"
+
+>
+
+  📍 Ver dirección
+
+</a>
+
       
       {/* Mensaje de validación de Nombre y Apellido */}
       {errorValidacion && (
