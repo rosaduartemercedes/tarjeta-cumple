@@ -128,10 +128,10 @@ if (
 
   rel="noopener noreferrer"
 
- className="w-full bg-black border border-white/20 hover:border-white/40 text-white hover:text-neutral-200 p-3 rounded-xl font-bold uppercase tracking-widest text-xs transition-all active:scale-[0.98] text-center block mt-1 hover:cursor-pointer"
+ className="w-full bg-gray-900 border border-white/20 hover:border-white/40 text-white hover:text-neutral-200 p-3 rounded-xl font-bold uppercase tracking-widest text-xs transition-all active:scale-[0.98] text-center block mt-1 hover:cursor-pointer"
 >
 
-  📍 Cómo llegar
+  📍 Ver en el mapa
 
 </a>
 
