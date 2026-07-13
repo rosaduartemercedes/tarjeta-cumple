@@ -128,7 +128,7 @@ if (
 
   rel="noopener noreferrer"
 
-  className="w-full bg-black border border-white/20 hover:border-white/40 text-neutral-300 hover:text-white p-3 rounded-xl font-bold uppercase tracking-widest text-[10px] transition-all active:scale-[0.98] text-center block mt-1"
+  className="w-full bg-black border border-white/20 hover:border-white/40 text-neutral-50 hover:text-white p-3 rounded-xl font-bold uppercase tracking-widest text-[10px] transition-all active:scale-[0.98] text-center block mt-1"
 
 >
 
