@@ -23,7 +23,7 @@ export default function Home() {
       // 1. bg-[url('/foto-mobile.jpg')] -> Carga la foto vertical por defecto (celulares).
       // 2. md:bg-[url('/foto-desktop.jpg')] -> En pantallas grandes (computadoras), cambia la foto a la horizontal.
       // 3. justify-end md:justify-center -> Abajo en el celu (para no tapar la cara), centrado en la compu.
-className="relative min-h-[100dvh] w-full flex flex-col items-center justify-end p-4 pb-6 md:justify-center bg-cover bg-[center_top_20%] md:bg-center bg-no-repeat bg-[url('/fondocata2.jpg')] md:bg-[url('/fondocata4.jpg')]"    
+className="relative min-h-[100dvh] w-full flex flex-col items-center justify-end p-4 pb-6 md:justify-center bg-cover bg-[center_top_20%] md:bg-center bg-no-repeat bg-[url('/fondocatamobile2.png')] md:bg-[url('/fondocata4.jpg')]"    
 >
       <div className="absolute inset-0 bg-neutral-950/10 z-0"></div>
 
