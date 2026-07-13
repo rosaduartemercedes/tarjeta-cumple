@@ -17,15 +17,18 @@ export default function Formulario() {
     e.preventDefault();
     setErrorValidacion(""); // Reseteamos errores previos
     
-    // 1. Limpiamos espacios extras y separamos por palabras
-    const palabras = nombre.trim().split(/\s+/);
+ // 1. Limpiamos espacios extras y separamos por palabras
+const palabras = nombre.trim().split(/\s+/);
 
-    // 2. Validamos que haya al menos 2 palabras y que no sean strings vacíos
-    if (palabras.length < 2 || palabras[0] === "" || palabras[1] === "") {
-      setErrorValidacion("Por favor, ingresá tu nombre y apellido.");
-      return; // Frenamos el envío acá
-    }
-
+// 2. Validamos que haya al menos 2 palabras y que cada una tenga mínimo 2 caracteres
+if (
+  palabras.length < 2 || 
+  palabras[0].length < 2 || 
+  palabras[palabras.length - 1].length < 2
+) {
+  setErrorValidacion("Por favor, ingresá tu nombre y apellido completo.");
+  return; // Frenamos el envío
+}
     setStatus("loading");
     
     try {
