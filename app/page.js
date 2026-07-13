@@ -7,11 +7,11 @@ export const metadata = {
 
 
   title: "| Te invito a mi cumple",
-  description: "Cumple de XV.",
+  description: "Cumple de Pili.",
   keywords: ["quince años", "cumpleaños"],
   openGraph: {
     title: "| Te invito a mi cumple",
-    description: "Cumple de XV.",
+    description: "Cumple de Pili.",
     images: [{ url: "/fondocatafinal.jpg" }], // Imagen que aparecerá al compartir el link
   },
 };
