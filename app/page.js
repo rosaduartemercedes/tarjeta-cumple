@@ -12,7 +12,7 @@ export const metadata = {
   openGraph: {
     title: "| Te invito a mi cumple",
     description: "Cumple de XV.",
-    images: [{ url: "/fondocata3.png" }], // Imagen que aparecerá al compartir el link
+    images: [{ url: "/fondocata3.jpg" }], // Imagen que aparecerá al compartir el link
   },
 };
 
