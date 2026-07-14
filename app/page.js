@@ -28,7 +28,7 @@ className="relative min-h-[100dvh] w-full flex flex-col items-center justify-end
       <div className="absolute inset-0 bg-neutral-950/10 z-0"></div>
 
       {/* Al estar abajo, le reducimos un toque el gap para que no sea gigante */}
-      <div className="relative z-10 w-full max-w-sm bg-black/55 backdrop-blur-md p-3 rounded-3xl border border-white/10 shadow-2xl flex flex-col gap-4 text-white">
+      <div className="relative z-10 w-full max-w-sm bg-black/35 backdrop-blur-md mb-0 p-3 rounded-3xl border border-white/10 shadow-2xl flex flex-col gap-4 text-white">
 
 
      {/* Contenedor Principal */}
