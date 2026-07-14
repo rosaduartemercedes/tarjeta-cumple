@@ -81,7 +81,7 @@ if (
 
   return (
     <form onSubmit={handleSubmit} className="flex flex-col gap-3 w-full">
-      <div className="text-center mb-1">
+      <div className="text-center mb-0">
 
 
 
@@ -89,38 +89,10 @@ if (
 
  
 
-
-
-
-        
-        <h2 className="text-xs font-bold uppercase tracking-[0.2em] text-neutral-300">Confirma tu asistencia</h2>
-      </div>
-
-      <input
-        type="text"
-        placeholder="Nombre y Apellido"
-        value={nombre}
-        onChange={(e) => {
-          setNombre(e.target.value);
-          if (errorValidacion) setErrorValidacion(""); // Si empieza a escribir de nuevo, limpiamos el error
-        }}
-        disabled={status === "loading"}
-        required
-        className="border border-white/10 p-3 rounded-xl text-base focus:outline-none focus:ring-1 focus:ring-white text-white bg-white/5 placeholder-neutral-500 backdrop-blur-sm transition-all text-center"
-      />
-
-      <button 
-        type="submit" 
-        disabled={status === "loading"}
-        className="bg-white text-black p-3 hover:cursor-pointer rounded-xl font-black uppercase tracking-widest hover:bg-neutral-200 transition-all disabled:bg-neutral-700 text-xs active:scale-[0.98]"
-      >
-        {status === "loading" ? "Confirmando..." : "Confirmar Invitación"}
-      </button>
-
- <div className="text-center mt-0 mb-0">
+<div className="text-center mt-0 mb-0">
  
-  <p className="text-sm font-semibold text-white tracking-wide">Te espero en: La Campiña Eventos</p>
-  <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-neutral-400">Av Corrientes 1234 </p>
+  <p className="text-sm font-semibold text-white tracking-[0.1em] ">Nos vemos en: La Campiña Eventos</p>
+  <p className="text-[10px] mt-2 font-bold uppercase tracking-[0.2em] text-neutral-400">Av Corrientes 1234 </p>
  
 </div>
 
@@ -133,13 +105,41 @@ if (
 
   rel="noopener noreferrer"
 
- className="w-full bg-red-950 border border-white/20 hover:border-white/40 text-white hover:text-neutral-200 p-3 rounded-xl font-bold uppercase tracking-widest text-xs transition-all active:scale-[0.98] text-center block mt-0 hover:cursor-pointer"
+ className="md:w-full mx-auto w-64 my-2 bg-red-950 border border-white/20 hover:border-white/40 text-white hover:text-neutral-200 p-2 rounded-lg font-bold uppercase tracking-widest text-xs transition-all active:scale-[0.98] text-center block hover:cursor-pointer"
 >
 
   📍 Ver en el mapa
 
 </a>
 
+
+
+        
+        <h2 className="text-xs font-bold uppercase tracking-[0.2em] text-neutral-300">Confirmar asistencia</h2>
+      </div>
+
+      <input
+        type="text"
+        placeholder="Nombre y Apellido"
+        value={nombre}
+        onChange={(e) => {
+          setNombre(e.target.value);
+          if (errorValidacion) setErrorValidacion(""); // Si empieza a escribir de nuevo, limpiamos el error
+        }}
+        disabled={status === "loading"}
+        required
+        className="border border-white/10 p-2 rounded-xl text-base focus:outline-none focus:ring-1 focus:ring-white text-white bg-white/5 placeholder-neutral-500 backdrop-blur-sm transition-all text-center"
+      />
+
+      <button 
+        type="submit" 
+        disabled={status === "loading"}
+        className="mx-auto w-64 md:w-full bg-white text-black p-2 hover:cursor-pointer rounded-lg font-black uppercase tracking-widest hover:bg-neutral-200 transition-all disabled:bg-neutral-700 text-xs active:scale-[0.98]"
+      >
+        {status === "loading" ? "Confirmando..." : "Confirmar Invitación"}
+      </button>
+
+ 
       
       {/* Mensaje de validación de Nombre y Apellido */}
       {errorValidacion && (
